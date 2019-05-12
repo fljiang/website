@@ -1,0 +1,137 @@
+// --------------- parallax 
+@keyframes parallax-stars{
+    from{
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-2000px);
+    }
+}
+
+// ---------------intro animation
+@keyframes rotate {
+    0% {
+        transform: rotateZ(0deg) scaleX(1) scaleY(1);
+    }
+    50% {
+        transform: rotateZ(180deg) scaleX(0.82) scaleY(0.95);
+    }
+    100% {
+        transform: rotateZ(360deg) scaleX(1) scaleY(1);
+    }
+}
+
+@keyframes rotate2 {
+    0% {
+        transform: rotateZ(0deg) scaleX(1) scaleY(1);
+    }
+    50% {
+        transform: rotateZ(-180deg) scaleX(0.95) scaleY(0.85);
+    }
+    100% {
+        transform: rotateZ(-360deg) scaleX(1) scaleY(1);
+    }
+}
+
+
+// -------------transition animations to main site
+@keyframes hidden {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes zoom-in {
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    60% {
+        transform: scale(5);
+        opacity: .1;
+    }
+    99%{
+        opacity: 0;
+        z-index: -99999;
+    }
+    100% {
+        visibility: hidden;
+        display: none;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        display: initial;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+// ---------------typing animation
+@keyframes typing {
+    from{
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+// ---------------nav bar slide down
+@keyframes slide-down {
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+// --------------nav bar slide up
+@keyframes slide-up {
+    from {
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+// ---------------for timeline 
+@keyframes shade-up {
+    0% {
+        height: 0em;
+        opacity: 0;
+        border-top: .1px solid $color-grey-dark;
+        background-color: transparent;
+    }
+    40% {
+        opacity: 0;
+    }
+    100% {
+        border-top: 3px solid $color-grey-dark;
+        height: 3em;
+        background-color: $color-grey-light-2;
+        color: $color-black;
+        z-index: 100;
+        height: 3em;
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        left: 35rem;
+    }
+    to {
+        opacity: 1;
+        left: 4.5rem;
+    }
+}

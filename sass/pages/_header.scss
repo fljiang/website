@@ -1,0 +1,79 @@
+// background for header
+.header {
+    font-family: 'Amatic SC', cursive;
+    height: 100vh;
+    min-height: 62rem;
+    position: relative;
+    background-attachment: fixed;
+    background-size: cover;
+    @include media-o(812px, landscape) {
+        min-height: 90rem;
+    }
+    @include media(700px) {
+        min-height: 80rem;
+    }
+}
+
+.intro {
+    text-align: center;
+    font-weight: 700;
+    @include absCenter;
+    @include media(668px) {
+        top: 45%;
+    }
+    &__heading-primary {
+        color: $color-white;
+        font-size: 8rem;
+        margin: 5rem 0;
+    }
+    &__paragraph {
+        display: inline-block;
+        // width: 55%;
+        color: $color-orange-light;
+        font-size: 3rem;
+        line-height: 4rem;
+        @include media(500px) {
+            width: 35vw;
+        }
+        @include media(420px) {
+            width: 40vw;
+        }
+    }
+}
+
+// mobile display picture
+.me {
+    display: none;
+    transform: translateY(-10%);
+    &__picture {
+        z-index: 1000;
+        width: 25rem;
+        border-radius: 50%;
+        border: 5px solid $color-blue-grey-light;
+        filter: brightness(.6);
+    }
+    @include media(668px) {
+        display: block;
+        z-index: 1000;
+    }
+}
+
+// background video
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: .35;
+    z-index: -1;
+    overflow: hidden;
+    &__container {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    @include media(668px) {
+        display: none;
+    }
+}

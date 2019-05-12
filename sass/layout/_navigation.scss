@@ -1,0 +1,58 @@
+.navigation-top {
+    position: fixed;
+    top: 0;
+    color: $color-white;
+    z-index: 1000000;
+    font-size: 1.9rem;
+    width: 100%;
+    border-bottom: 2px solid $color-orange-dark;
+    background-color: rgba($color-black, .8);
+    -webkit-transform: translateZ(0);
+    @include media(950px) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        flex-grow: 1;
+        justify-content: space-around;
+    }
+    @include media(667px) {
+        display: none;
+    }
+    &__link {
+        transition: all .3s;
+        @include media(950px) {
+            margin: 0 2rem;
+        }
+        @include media(667px) {
+            display: none;
+        }
+        & i {
+            margin: 0 .9rem;
+        }
+        &:visited,
+        &:link {
+            //flex box overrides float, so no media query needed
+            margin: 2rem 0;
+            font-weight: 400;
+            float: right;
+            color: inherit;
+            text-align: right;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding-right: 3rem;
+        }
+        &:hover {
+            color: $color-blue-light;
+        }
+    }
+}
+
+.close {
+    animation: slide-down .2s ease-in;
+    animation-fill-mode: forwards;
+}
+
+.open {
+    animation: slide-up .2s ease-out;
+    animation-fill-mode: forwards;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Faster+One">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700">
+
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/intro.js"></script>
+    <script type="text/javascript" src="js/timeline.js"></script>
+    <script type="text/javascript" src="js/navbar.js"></script>
+    <script type="text/javascript" src="js/generic.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Felicia Jiang</title>
+</head>
+
+<body class="overflow">
+    <!-- top navigation bar -->
+    <div class="navigation-top hidden-display" id="top">
+        <p class="navigation-top__time" id="time"></p>
+        <a href="https://www.linkedin.com/in/fljiang/" target="_blank" class="navigation-top__link">
+        <i class="fa fa-linkedin" aria-hidden="true"></i>LinkedIn</a>
+        <a href="https://github.com/fljiang" target="_blank" class="navigation-top__link">
+        <i class="fa fa-github" aria-hidden="true"></i>Github</a>
+        <a href="#" onClick="window.open('./pdf/FeliciaJiangResume.pdf')" class="navigation-top__link">
+        <i class="fa fa-file-text-o" aria-hidden="true"></i>Resume</a>
+    </div>
+
+    <!-- mobile navigation buttons -->
+
+    <!-- header section -->
+    <main class="hidden-display">
+        <header class="header">
+            <div class="intro">
+                <h1 class="intro__heading-primary">
+                    Felicia Jiang
+                </h1>
+                <p class="intro__paragraph">
+                    Double major Statistics and Computational Math @ University of Waterloo
+                    <br/>
+                    Student ~ Programmer ~ Varsity Athlete ~ Artist
+                </p>
+                <div class="btn">
+                    <a href="#timeline" class="btn__timeline">Check out my art!</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- progress section -->
+        <div class="timeline__intro">
+            <h1 class="heading-primary">
+                In Progress
+            </h1>
+        </div>
+        <section class="timeline" id="timeline">
+            <div>
+                <div class="timeline__start">
+                    &#9673;
+                </div>
+                <ul>
+                    <li class="list-element">
+                        <div>
+                            <h3 class="list-element__title">Lineart</h3>
+                            <img class="list-element__image" src="img/0:8.jpg">
+                        </div>
+                    </li>
+                    <li class="list-element">
+                        <div>
+                            <h3 class="list-element__title">Coloring</h3>
+                            <img class="list-element__image" src="img/5:8.jpg">
+                        </div>
+                    </li>
+                    <li class="list-element">
+                        <div>
+                            <h3 class="list-element__title">Coloring</h3>
+                            <img class="list-element__image" src="img/6.5:8.jpg">
+                        </div>
+                    </li>
+                    <li class="list-element">
+                        <div>
+                            <h3 class="list-element__title">Coloring</h3>
+                            <img class="list-element__image" src="img/8:8.jpg">
+                        </div>
+                    </li>
+                    <li class="list-element">
+                        <div>
+                            <h3 class="list-element__title">Background</h3>
+                            <img class="list-element__image" src="img/9:8.jpg">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- completed section -->
+        <div>
+            <h1 class="resource__heading-primary heading-primary">
+                Completed
+            </h1>
+        </div>
+        <section class="resource" id="projects">
+            <div class="flex-container">
+                <div>
+                    <img class="list-element__image" src="img/9:8.jpg">
+                </div>
+                <div>
+                    <img class="list-element__image" src="img/9:8.jpg">
+                </div>
+                <div>
+                    <img class="list-element__image" src="img/9:8.jpg">
+                </div>
+            </div>
+        </section>
+    </main>     
+</body>
+
+</html>

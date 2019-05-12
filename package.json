@@ -1,0 +1,23 @@
+{
+  "name": "fljiang.github.io",
+  "version": "1.0.0",
+  "description": "Website",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fljiang/fljiang.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fljiang/fljiang.github.io/issues"
+  },
+  "homepage": "https://github.com/fljiang/fljiang.github.io#readme",
+  "devDependencies": {
+    "node-sass": "^4.7.2"
+  }
+}

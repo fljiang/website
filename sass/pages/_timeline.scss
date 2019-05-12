@@ -1,0 +1,243 @@
+// container
+.timeline {
+    border-top: 2px solid $color-grey-dark-2;
+    border-bottom: 2px solid $color-grey-dark-2;
+    padding-top: 50em;
+    padding-bottom: 20rem;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    // title
+    &__intro {
+        position: relative;
+        cursor: default;
+    }
+    &__start {
+        position: absolute;
+        margin: -12rem auto;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10000;
+        text-align: center;
+        font-size: 7rem;
+        color: $color-blue-grey-dark;
+        @include media(600px) {
+            position: absolute;
+            margin: -11rem auto;
+            left: 2.9rem;
+        }
+    }
+    & div ul {
+        padding: 50px 0;
+    }
+    @include media(500px) {
+        padding-top: 45em;
+    }
+    @include media-o(700px) {
+        padding-top: 45em;
+    }
+    @include media(400) {
+        padding-top: 40em;
+    }
+}
+
+// Every list element
+.list-element {
+    list-style: none;
+    position: relative;
+    width: .8rem;
+    margin: -16rem auto;
+    padding-top: 17rem;
+    background: $color-grey-dark;
+    font-weight: 400;
+    font-size: 1.4rem;
+    border-radius: 3px;
+    color: rgba($color-grey-light-2, .7);
+    // offset first child to give it more space
+    &:first-child {
+        padding-top: 2rem;
+    }
+    &__image {
+        width: 100%;
+        transition: .5s all;
+        &:hover {
+            transform: scale(1.5);
+            z-index: 10002;
+        }
+    }
+    &__title {
+        font-size: 2.4rem;
+        font-weight: 300;
+        line-height: 3rem;
+        padding-bottom: .5rem;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid rgba($color-blue-grey, .8);
+    }
+    &__text {
+        line-height: 2.3rem;
+        & ul {
+            padding: 0 20px !important;
+        }
+    }
+    &__link {
+        position: absolute;
+        display: inline-block;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        text-align: center;
+        border-radius: 0 0 .5rem .5rem;
+        padding-top: 1em;
+        color: transparent;
+        text-decoration: none;
+        &-cross {
+            text-decoration: line-through;
+        }
+    }
+    &:hover &__link {
+        color: $color-blue-light;
+    }
+    &::after {
+        // Black circles
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: .5px;
+        transform: translateX(-50%);
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        box-shadow: .1rem .2rem .2rem rgba($color-black, .3);
+        background: inherit;
+        pointer-events: none;
+    }
+    // the actual timeline object
+    & div {
+        position: relative;
+        bottom: 0;
+        width: 40rem;
+        padding: 1.5rem;
+        background: rgba($color-blue-grey-dark, .7);
+        border-radius: 5px;
+        box-shadow: 0 .5rem .5rem rgba($color-black, .8); // blur filter in chrome lags -- fix later
+        // &:hover .list-element__text {
+        //     transition: all .4s .15s;
+        //     filter: blur(3px);
+        // }
+        // &:hover .list-element__title {
+        //     transition: all .4s .15s;
+        //     filter: blur(3px);
+        // }
+        // &:hover .list-element__link {
+        //     transition: all .4s;
+        //     animation: shade-up .4s linear;
+        //     animation-fill-mode: forwards;
+        // }
+        &::before {
+            // triangular arrows
+            content: "";
+            position: absolute;
+            bottom: .5rem;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        &:hover {
+            transition: all .2s;
+            box-shadow: 0 .2rem .5rem rgba($color-black, .2);
+        }
+    }
+    &:nth-child(odd) div {
+        left: -43.9rem;
+        &::before {
+            right: -1.6rem;
+            // border width: top | right | bottom | left
+            border-width: .8rem 0 .8rem 1.6rem;
+            border-color: transparent transparent transparent rgba($color-blue-grey-dark, .7);
+        }
+    }
+    &:nth-child(even) div {
+        left: 4.5rem;
+        &::before {
+            left: -1.6rem;
+            border-width: .8rem 1.6rem .8rem 0;
+            border-color: transparent rgba($color-blue-grey-dark, .7) transparent transparent;
+        }
+    }
+}
+
+// Transitions
+.list-element {
+    // circles
+    &::after {
+        transition: background .5s ease-in-out;
+    }
+    &.in-view::after {
+        background: $color-blue-grey-dark;
+        z-index: 1;
+    }
+    & div {
+        visibility: hidden;
+        opacity: 0;
+        transition: all .5s ease-in-out;
+    } //slide in animations
+    &:nth-child(odd) div {
+        transform: translateX(-20rem);
+    }
+    &:nth-child(even) div {
+        transform: translateX(20rem);
+    }
+    // shows list element by removing translateX
+    &.in-view div {
+        transform: none;
+        visibility: visible;
+        opacity: 1;
+    } // more efficient to have 1 section of query here instead of split into 3
+    @include media(1000px) {
+        & div {
+            width: 35vw;
+        }
+        &:nth-child(odd) div {
+            left: -39vw;
+        }
+        &:nth-child(even) div {
+            left: 5vw;
+        }
+    }
+    @include media(800px) {
+        font-size: 1.2rem;
+        &__title {
+            font-size: 1.5rem;
+        }
+    }
+    @include media(750px) {
+        &:nth-child(odd) div {
+            left: -40vw;
+        }
+        &:nth-child(even) div {
+            left: 6vw;
+        }
+    }
+    @include media(600px) {
+        margin-left: 2.5rem;
+        & div {
+            width: calc(100vw - 9.5rem); //Need to override the other translates since the other ones are more target-specific
+            transform: translateX(0) !important;
+        }
+        &:nth-child(odd) div {
+            animation: slide-in .5s ease-in-out;
+            left: 4.5rem;
+            &::before {
+                left: -1.6rem;
+                border-color: transparent rgba($color-blue-grey-dark, .7) transparent transparent;
+                border-width: .8rem 1.6rem .8rem 0;
+            }
+        }
+        &:nth-child(even) div {
+            left: 4.5rem;
+            &::before {
+                left: -1.6rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,85 @@
+.navigation-toggle {
+    display: none;
+    position: fixed;
+    z-index: 5000;
+    top: -2vh;
+    right: 2rem;
+    line-height: 5;
+    text-align: center;
+    @include media(667px) {
+        display: initial;
+    }
+    &__parent {
+        background-color: $color-blue;
+        color: $color-white;
+        font-size: 2.5rem;
+        text-align: center;
+        padding: 1rem 1.5rem;
+        border-radius: 50%;
+        font-weight: 400;
+        transition: background-color .3s;
+        &:hover,
+        &:active {
+            background-color: $color-blue-dark;
+        }
+    } // selects child __list element
+    &__parent:active~&__list,
+    &__parent:focus~&__list,
+    &__parent:focus-within~&__list {
+        visibility: visible;
+        opacity: 1;
+        z-index: 1000;
+        transition-delay: 0s, 0s, 0.3s;
+        /* this removes the transition delay so the menu will be visible while the other styles transition */
+    }
+    &__list {
+        // display unordered list - the buttons
+        height: 0;
+        visibility: hidden;
+        list-style: none;
+        /* hides sub-menu */
+        opacity: 0;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        transform: translateY(-5.5em);
+        z-index: -1;
+        transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
+    }
+    &__item {
+        height: 6rem;
+        position: relative;
+        &:focus {
+            outline: none;
+        }
+    }
+    // per nav item
+    &__link {
+        &:link,
+        &:visited,
+        &:focus {
+            width: 100%;
+            text-decoration: none;
+            outline: none;
+            font-size: 2.5rem;
+            font-weight: 400;
+            max-height: 1rem;
+            color: $color-white;
+        }
+        & i {
+            outline: none;
+            transition: background-color .3s;
+            background-color: $color-orange;
+            padding: 1rem 1rem;
+            padding-right: 1.1rem;
+            width: 4.5rem;
+            height: 4.5rem;
+            border-radius: 50%;
+        }
+        &:hover i,
+        &:active i {
+            transition: all .1s linear;
+            background-color: $color-orange-dark;
+        }
+    }
+}
