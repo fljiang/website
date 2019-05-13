@@ -19,9 +19,9 @@
     <title>Felicia Jiang</title>
 </head>
 
-<body class="overflow">
-    <!-- top navigation bar -->
-    <div class="navigation-top hidden-display" id="top">
+<body>
+    <!-- Navigation Buttons -->
+    <div class="navigation-top" id="top">
         <p class="navigation-top__time" id="time"></p>
         <a href="https://www.linkedin.com/in/fljiang/" target="_blank" class="navigation-top__link">
         <i class="fa fa-linkedin" aria-hidden="true"></i>LinkedIn</a>
@@ -31,10 +31,15 @@
         <i class="fa fa-file-text-o" aria-hidden="true"></i>Resume</a>
     </div>
 
-    <!-- mobile navigation buttons -->
+    <!-- Background -->
+    <div id="stars1"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
 
-    <!-- header section -->
-    <main class="hidden-display">
+    <!-- Mobile Navigation Buttons -->
+
+    <!-- Header -->
+    <main>
         <header class="header">
             <div class="intro">
                 <h1 class="intro__heading-primary">
@@ -51,7 +56,7 @@
             </div>
         </header>
 
-        <!-- progress section -->
+        <!-- Timeline -->
         <div class="timeline__intro">
             <h1 class="heading-primary">
                 In Progress
@@ -64,31 +69,31 @@
                 </div>
                 <ul>
                     <li class="list-element">
-                        <div>
+                        <div class="list-element__container">
                             <h3 class="list-element__title">Lineart</h3>
                             <img class="list-element__image" src="img/0:8.jpg">
                         </div>
                     </li>
                     <li class="list-element">
-                        <div>
+                        <div class="list-element__container">
                             <h3 class="list-element__title">Coloring</h3>
                             <img class="list-element__image" src="img/5:8.jpg">
                         </div>
                     </li>
                     <li class="list-element">
-                        <div>
+                        <div class="list-element__container">
                             <h3 class="list-element__title">Coloring</h3>
                             <img class="list-element__image" src="img/6.5:8.jpg">
                         </div>
                     </li>
                     <li class="list-element">
-                        <div>
+                        <div class="list-element__container">
                             <h3 class="list-element__title">Coloring</h3>
                             <img class="list-element__image" src="img/8:8.jpg">
                         </div>
                     </li>
                     <li class="list-element">
-                        <div>
+                        <div class="list-element__container">
                             <h3 class="list-element__title">Background</h3>
                             <img class="list-element__image" src="img/9:8.jpg">
                         </div>
@@ -97,22 +102,35 @@
             </div>
         </section>
 
-        <!-- completed section -->
+        <!-- Flex Grid -->
         <div>
-            <h1 class="resource__heading-primary heading-primary">
+            <h1 class="flexgrid__heading-primary heading-primary">
                 Completed
             </h1>
         </div>
-        <section class="resource" id="projects">
-            <div class="flex-container">
-                <div>
-                    <img class="list-element__image" src="img/9:8.jpg">
+        <section class="flexgrid" id="projects">
+            <div class="flexgrid__container">
+                <div class="flexgrid__container-row">
+                    <div>
+                        <img class="flexgrid__container-image" src="img/1.jpg">
+                    </div>
+                    <div>
+                        <img class="flexgrid__container-image" src="img/2.jpg">
+                    </div>
+                    <div>
+                        <img class="flexgrid__container-image" src="img/3.jpg">
+                    </div>
+                    <div>
+                        <img class="flexgrid__container-image" src="img/4.jpg">
+                    </div>
                 </div>
-                <div>
-                    <img class="list-element__image" src="img/9:8.jpg">
-                </div>
-                <div>
-                    <img class="list-element__image" src="img/9:8.jpg">
+                <div class="flexgrid__container-row">
+                    <div>
+                        <img class="flexgrid__container-image" src="img/5.jpg">
+                    </div>
+                    <div>
+                        <img class="flexgrid__container-image" src="img/6.jpg">
+                    </div>
                 </div>
             </div>
         </section>

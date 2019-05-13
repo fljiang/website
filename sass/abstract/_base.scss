@@ -20,7 +20,12 @@ html {
 
 body {
     box-sizing: border-box;
-    background: linear-gradient(45deg, rgba($color-black, .4), rgba($color-black, .6), rgba($color-black, .6)), url(../img/dark-bg.jpg);
+    position: fixed;
+    width: 100vw;
+    height: 100%;
+    z-index: -1;
+    background: radial-gradient(ellipse at bottom, $color-space-blue 0%, $color-space-black 100%);
+    // background: linear-gradient(45deg, rgba($color-black, .4), rgba($color-black, .6), rgba($color-black, .6)), url(../img/dark-bg.jpg);
     background-attachment: fixed;
     background-size: cover;
     overflow-x: hidden;
@@ -39,4 +44,8 @@ html, body {
     position: relative;
     width: 100%;
     height: 100%;
+}
+
+main {
+    position: relative;
 }
