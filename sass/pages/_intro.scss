@@ -23,33 +23,28 @@
     animation: parallax-stars 120s linear infinite;
 }
 
-// side classes 
-.hidden-display {
-    display: none;
-}
-
-.hidden {
-    animation: hidden .3s linear;
-    animation-fill-mode: forwards;
-    z-index: -100;
-}
-
-.overflow {
-    overflow: hidden;
-}
-
-.show {
-    opacity: 1 !important;
-}
-
-// remove blue select active box for touch input
-.clicker, .clicker:active, .clicker:focus, .clicker:focus:active {
-    cursor: pointer;
-    -webkit-tap-highlight-color: rgba(0,0,0,0) !important;
-}
-
-.scale {
-    backface-visibility: hidden;
-    animation-fill-mode: forwards;
-    animation: zoom-in 2s linear;
+.intro {
+    text-align: center;
+    font-weight: 700;
+    @include absCenter;
+    @include media(668px) {
+        top: 45%;
+    }
+    &__heading-primary {
+        color: $color-white;
+        font-size: 8rem;
+        margin: 5rem 0;
+    }
+    &__paragraph {
+        display: inline-block;
+        color: $color-orange-light;
+        font-size: 3rem;
+        line-height: 4rem;
+        @include media(500px) {
+            width: 35vw;
+        }
+        @include media(420px) {
+            width: 40vw;
+        }
+    }
 }

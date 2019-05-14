@@ -1,4 +1,4 @@
-// background for header
+// Background for header
 .header {
     font-family: 'Amatic SC', cursive;
     height: 100vh;
@@ -28,7 +28,6 @@
     }
     &__paragraph {
         display: inline-block;
-        // width: 55%;
         color: $color-orange-light;
         font-size: 3rem;
         line-height: 4rem;
@@ -41,39 +40,4 @@
     }
 }
 
-// mobile display picture
-.me {
-    display: none;
-    transform: translateY(-10%);
-    &__picture {
-        z-index: 1000;
-        width: 25rem;
-        border-radius: 50%;
-        border: 5px solid $color-blue-grey-light;
-        filter: brightness(.6);
-    }
-    @include media(668px) {
-        display: block;
-        z-index: 1000;
-    }
-}
 
-// background video
-.video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    opacity: .35;
-    z-index: -1;
-    overflow: hidden;
-    &__container {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-    }
-    @include media(668px) {
-        display: none;
-    }
-}

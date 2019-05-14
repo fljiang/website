@@ -7,12 +7,10 @@
 @import "base/typography";
 
 @import "components/buttons";
-@import "components/popup";
 @import "components/particles";
 
-@import "layout/grid";
-@import "layout/navigation-btn";
-@import "layout/navigation";
+@import "navbar/navigation-btn";
+@import "navbar/navigation";
 
 @import "pages/header";
 @import "pages/timeline";

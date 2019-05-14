@@ -1,4 +1,4 @@
-// container
+// Container
 .timeline {
     border-top: 2px solid $color-grey-dark-2;
     border-bottom: 2px solid $color-grey-dark-2;
@@ -6,12 +6,6 @@
     padding-bottom: 20rem;
     overflow-x: hidden;
     overflow-y: hidden;
-    width: 100%;
-    // title
-    &__intro {
-        position: relative;
-        cursor: default;
-    }
     &__start {
         position: absolute;
         margin: -12rem auto;
@@ -41,7 +35,6 @@
     }
 }
 
-// Every list element
 .list-element {
     list-style: none;
     position: relative;
@@ -53,7 +46,7 @@
     font-size: 1.4rem;
     border-radius: 3px;
     color: rgba($color-grey-light-2, .7);
-    // offset first child to give it more space
+    // Offset first child to give it more space
     &:first-child {
         padding-top: 2rem;
     }
@@ -86,24 +79,6 @@
             padding: 0 20px !important;
         }
     }
-    &__link {
-        position: absolute;
-        display: inline-block;
-        width: 100%;
-        left: 0;
-        bottom: 0;
-        text-align: center;
-        border-radius: 0 0 .5rem .5rem;
-        padding-top: 1em;
-        color: transparent;
-        text-decoration: none;
-        &-cross {
-            text-decoration: line-through;
-        }
-    }
-    &:hover &__link {
-        color: $color-blue-light;
-    }
     &::after {
         // Black circles
         content: "";
@@ -118,7 +93,7 @@
         background: inherit;
         pointer-events: none;
     }
-    // the actual timeline object
+    // Actual timeline object
     & div {
         position: relative;
         bottom: 0;

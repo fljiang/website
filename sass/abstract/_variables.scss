@@ -1,4 +1,4 @@
-// COLORS
+// Colors
 
 $color-blue: #1565C0;
 $color-blue-dark: #0D47A1;
@@ -19,24 +19,23 @@ $color-grey-dark-3: #333;
 $color-grey-light-1: #f7f7f7;
 $color-grey-light-2: #eee;
 
-
 $color-white: #fff;
 $color-black: #000;
 
 $color-space-blue: #1B2735;
 $color-space-black: #090A0F;
 
-
-// FONT SIZES
+// Font 
 $default-font-size: 1.6rem;
 
-// GRID
+// Grid
 $grid-width: 114rem;
-// blank spaces for grid
+
+// Blank spaces for grid
 $gutter-vertical: 8rem;
 $gutter-horizontal: 6rem;
 
-// parallax stars
+// Parallax stars
 $small-stars: stars-boxshadow(5000);
 $medium-stars: stars-boxshadow(2000); 
 $large-stars: stars-boxshadow(800); 

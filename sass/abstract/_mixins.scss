@@ -26,7 +26,7 @@
     }
 }
 
-// type writer animation
+// Type writer animation
 @mixin type($steps, $cursor-size: '.15em', $type-speed: '2s', $cursor-blink-speed: '.5s') {
     overflow: hidden; // hides content outside of box
     white-space: nowrap; // ensures everything is 1 line

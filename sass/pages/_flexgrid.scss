@@ -1,4 +1,4 @@
-// container for each folder
+// Completed section
 .flexgrid {
     height: 100vh;
     position: relative;
@@ -18,7 +18,7 @@
         justify-content: space-around;
         &-image {
             width: 100%;
-            //border: 4px solid $color-white;
+            // border: 4px solid $color-white;
             border-radius: 3px;
             transition: .5s all;
             &:hover {
