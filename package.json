@@ -1,5 +1,5 @@
 {
-  "name": "fljiang.github.io",
+  "name": "Website",
   "version": "1.0.0",
   "description": "Website",
   "main": "index.js",
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fljiang/fljiang.github.io.git"
+    "url": "git+https://github.com/fljiang/Website"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fljiang/fljiang.github.io/issues"
+    "url": "https://github.com/fljiang/Website/issues"
   },
-  "homepage": "https://github.com/fljiang/fljiang.github.io#readme",
+  "homepage": "https://github.com/fljiang/Website#readme",
   "devDependencies": {
     "node-sass": "^4.7.2"
   }
