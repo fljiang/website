@@ -37,7 +37,7 @@
     }
     &__paragraph {
         display: inline-block;
-        color: $color-orange-light;
+        color: $color-orange;
         font-size: 3rem;
         line-height: 4rem;
         @include media(500px) {
