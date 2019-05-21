@@ -14,30 +14,6 @@
     }
 }
 
-.intro {
-    text-align: center;
-    font-weight: 700;
-    @include absCenter;
-    @include media(668px) {
-        top: 45%;
-    }
-    &__heading-primary {
-        color: $color-white;
-        font-size: 8rem;
-        margin: 5rem 0;
-    }
-    &__paragraph {
-        display: inline-block;
-        color: $color-orange-light;
-        font-size: 3rem;
-        line-height: 4rem;
-        @include media(500px) {
-            width: 35vw;
-        }
-        @include media(420px) {
-            width: 40vw;
-        }
-    }
-}
+
 
 
