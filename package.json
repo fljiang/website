@@ -1,23 +1,23 @@
 {
-  "name": "Website",
+  "name": "website",
   "version": "1.0.0",
-  "description": "Website",
+  "description": "website",
   "main": "index.js",
   "scripts": {
     "sass": "node-sass sass/main.scss css/style.css -w"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fljiang/Website"
+    "url": "git+https://github.com/fljiang/website"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fljiang/Website/issues"
+    "url": "https://github.com/fljiang/website/issues"
   },
-  "homepage": "https://github.com/fljiang/Website#readme",
+  "homepage": "https://github.com/fljiang/website#readme",
   "devDependencies": {
-    "node-sass": "^4.7.2"
+    "node-sass": "^4.13.0"
   }
 }

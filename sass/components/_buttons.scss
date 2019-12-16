@@ -9,6 +9,9 @@
     @include media(668px) {
         top: 100%;
     }
+    &.btn-two {
+        top: 185%;
+    }
     &__timeline {
         color: $color-white;
         display: block;
