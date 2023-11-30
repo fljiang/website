@@ -186,7 +186,7 @@ body {
     color: #fff;
     display: block;
     width: 100%;
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-decoration: none;
     background-color: #455A64;
     border: none;
@@ -206,7 +206,7 @@ body {
     background-color: #303f46;
     height: calc(5rem/3); }
   .btn:hover {
-    transform: rotateX(20deg) translate(-50%, 100%);
+    transform: rotateX(20deg) translate(-50%, 120%);
     transition: all 250ms cubic-bezier(0.175, 0.885, 0.32, 3); }
 
 #particles-js {
@@ -281,7 +281,7 @@ body {
   .navigation-toggle__link i {
     outline: none;
     transition: background-color .3s;
-    background-color: #F4511E;
+    background-color: #fff;
     padding: 1rem 1rem;
     padding-right: 1.1rem;
     width: 4.5rem;
@@ -290,7 +290,7 @@ body {
   .navigation-toggle__link:hover i,
   .navigation-toggle__link:active i {
     transition: all .1s linear;
-    background-color: #D84315; }
+    background-color: #fff; }
 
 .navigation-top {
   position: fixed;
@@ -422,6 +422,13 @@ body {
     padding-bottom: .5rem;
     margin-bottom: 1rem;
     border-bottom: 2px solid rgba(255, 255, 255, 0.8); }
+  .list-element__text {
+      color: #fff;
+      font-size: 1.4rem;
+      font-weight: 100;
+      padding-bottom: .5rem;
+      margin-bottom: 1rem;
+  }
   .list-element::after {
     content: "";
     position: absolute;
